@@ -43,6 +43,7 @@ Main Business Question:
 ---
 
 ## 📂 Dataset Description & Data Structure  
+<details><summary>Click here to know more</summary>
 
 ### 📌 Data Source  
 - Source:([Dataset/churn_prediction.xlsx](https://github.com/DatawithChrisNguyen/Python-E-Commerce-CustomerRetention/blob/main/Dataset/churn_prediction.xlsx))  
@@ -81,11 +82,14 @@ Table: Products Table
 | DaySinceLastOrder            | FLOAT     | Number of days since last order                                         |
 | CashbackAmount               | FLOAT     | Cashback amount received by customer                                    |
 
----
+</details>
+</p>
 
 ## ⚒️ Main Process
 
 ### 1️⃣ Data Cleaning & Preprocessing
+<details><summary>Click here to know more</summary>
+    
 _Checking the data_
 ```
 def data_overview(data, name=""):
@@ -137,6 +141,12 @@ _Checking And Handling Missing Data_
 ```print("Total missing values:", records.isnull().sum().sum())```
 
 Fortunately, there is no missing value here, so I can move to the EDA Analysis
+</details>
+</p>
+Overall:
+- Guarantee the consistency of the data
+
+- Make sure there is no missing value to cover all hidden values
 
 ### 2️⃣ Exploratory Data Analysis (EDA) 
 _Univariate Analysis_
@@ -266,6 +276,7 @@ print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 
 ## Task 2: Behaviour Segmentation
+<details><summary>Click here to know more</summary>
 _1.Finding the best number of clusters_
 
 __Elbow Method__
@@ -357,6 +368,9 @@ plt.show()
 print("\n=== Cluster Summary ===")
 print(churned.groupby("Cluster").mean())
 ```
+</details>
+</p>
+
 ![](Images/Seg_Result.png)
 
 Insights:
@@ -434,7 +448,7 @@ Summary: These users churned quietly despite recent engagement. Monitor post-ord
 
 ✔️ Recommendation 3 - Behavior Segmentation:
 
-Your clustering analysis reveals five distinct churn profiles, each with unique engagement patterns and churn drivers. To turn these insights into action:
+The clustering analysis reveals five distinct churn profiles, each with unique engagement patterns and churn drivers. To turn these insights into action:
 - Cluster 0 & 3: Loyal, high-value users who churned despite strong engagement.
 → Prioritize for win-back campaigns, loyalty rewards, and personalized outreach.
 - Cluster 1 & 4: Low-activity churners with weak retention signals.
