@@ -1,9 +1,10 @@
-# Churn Prediction & Behavioral Segmentation of a company in the E-Commerce Industry
+<h1 align="center">Churn Prediction & Behavioral Segmentation for Customer Retention</h1>
+<h2 align="center">E-commerce – Python & Machine Learning</h2>
 
 - Author: Chris Nguyen/ Dinh Khoi Nguyen  
 - Completed date: 2025-Aug-30
 - Uploaded Date: 2025-Nov-11 
-- Tools Used: Python
+- Tools Used: Python, Machine Learning
 
 ## 📑 Table of Contents  
 1. [📌 Background & Overview](#-background--overview)  
@@ -143,10 +144,22 @@ _Checking And Handling Missing Data_
 Fortunately, there is no missing value here, so I can move to the EDA Analysis
 </details>
 </p>
-Overall:
-- Guarantee the consistency of the data
 
-- Make sure there is no missing value to cover all hidden values
+✅ Key Actions Taken:
+- Standardized category labels:
+  
+Unified similar entries to avoid duplication and misinterpretation. For example:
+
+    - “Mobile Phone” and “Mobile” were treated as the same device type
+    - “Cash on Delivery” and “COD” were merged into one payment method
+    - “Credit Card” and “CC” were also unified
+- Validated data completeness:
+  
+The dataset had no missing values, so the total number of records remained unchanged after cleaning.
+- Prepared categorical fields for analysis:
+
+Ensured that fields like PreferredLoginDevice, PreferredOrderCat, PreferredPaymentMode, Gender, and Martial Status were consistent and ready for grouping, filtering, and modeling.
+
 
 ### 2️⃣ Exploratory Data Analysis (EDA) 
 _Univariate Analysis_
